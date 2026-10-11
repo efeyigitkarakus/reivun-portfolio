@@ -132,6 +132,7 @@ h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
+  border-radius: 8px;
 }
 
 .techs-category {
