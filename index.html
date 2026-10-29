@@ -1,47 +1,62 @@
 <!DOCTYPE html>
+<!-- html etiketi: Sayfanın başlangıcı. lang="en" içeriğin İngilizce olduğunu tarayıcıya ve ekran okuyuculara bildirir. -->
 <html lang="en">
 <head>
+  <!-- charset: Karakter kodlaması. UTF-8, Türkçe ve özel karakterlerin doğru görünmesini sağlar. -->
   <meta charset="UTF-8">
+  <!-- viewport: Mobil cihazlarda sayfanın doğru boyutta görünmesini sağlar (yakınlaştırma, genişlik ayarı). -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- description: Arama motorlarında (Google gibi) siteniz hakkında gösterilen kısa açıklama. SEO için önemli. -->
+  <meta name="description" content="Efe Yiğit Karakuş (Reivun) kişisel portfolyo sitesi. Yazılım geliştirme, teknoloji, Linux ve diğer ilgi alanları hakkında bilgi.">
+  <!-- author: Sayfanın yazarını belirtir. -->
+  <meta name="author" content="Efe Yiğit Karakuş">
+
+  <!-- CSS dosyası bağlantısı: index.html kök dizinde olduğu için 'images' klasörüne doğru yol 'images/...' (../images hatalıydı). -->
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- Google Fonts bağlantıları: Web üzerinde Geist ve Geist Mono yazı tiplerini yükler. preconnect, bağlantıyı erken açar. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet"> 
-  <title>efeyigitkarakus.reivun.xyz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- title: Tarayıcı sekmesinde görünen başlık. Arama motorları için de önemli. -->
+  <title>Efe Yiğit Karakuş | Kişisel Portfolyo</title>
+
+  <!-- JavaScript: 'defer' özelliği, HTML'in tamamen yüklenmesini bekler ve sayfa render'ını engellemez. -->
+  <!-- Dosya şu an boş, ancak ileride interaktif özellikler eklemek için hazırdır. -->
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">  
-      <a href="index.html">
-      <img src="images/logo.png" alt="logo">
+  <!-- nav: Site içinde gezinme menüsü. aria-label, ekran okuyucular için menünün amacını açıklar. -->
+  <nav class="navbar" aria-label="Ana navigasyon menüsü">
+    <div class="logo">
+      <!-- Logo bağlantısı: Kullanıcıyı anasayfaya döndürür. -->
+      <a href="index.html" aria-label="Anasayfaya dön">
+        <img src="images/logo.png" alt="Reivun kişisel logosu">
       </a>
     </div>
     <div class="nav-links">
       <a href="tr/index.html">Tr</a>
-      <a href="index.html">Home Page</a>
+      <!-- aria-current="page": Şu anda bulunduğunuz sayfayı belirtir (erişebilirlik için). -->
+      <a href="index.html" aria-current="page">Home Page</a>
       <a href="blog.html">Blog</a>
     </div>
   </nav>
+
+  <!-- main: Sayfanın ana içeriği. Bir sayfada sadece bir <main> olmalıdır. -->
   <main>
-    <section>
+    <!-- section: İçerik grubunu temsil eder. Her biri kendi başına anlamlı bir bölüm. -->
+    <section class="align-left">
       <h1>Who Am I?</h1>
-      <p>My name is Efe Yiğit Karakuş, but my internet handle is "Reivun", you can 
-      call me whatever you like. I'm a young enthusiast with a broad range of 
-      interests; including software development, technology, Linux, literature, 
-      social sciences (such as philosophy or sociology), zoology, popular science, 
-      cinematography, music.</p>
+      <p>My name is Efe Yiğit Karakuş, but my internet handle is "Reivun", you can call me whatever you like. I'm a young enthusiast with a broad range of interests; including software development, technology, Linux, literature, social sciences (such as philosophy or sociology), zoology, popular science, cinematography, music.</p>
     </section>
-    <section>
+
+    <section class="align-right">
       <h2>What is my destination?</h2>
-      <p>Having underperformed in the university entrance exams last year, I 
-      enrolled on a foundation degree programme this year. However, while 
-      continuing with my first year, I am preparing for the entrance exams again to
-      secure a place on a full undergraduate degree. After I graduate, I plan to 
-      work as a web developer, at the same time I'll start creating content across 
-      various areas on youtube. Also I plan to write books but this is much further 
-      down the line</p>
+      <p>Having underperformed in the university entrance exams last year, I enrolled on a foundation degree programme this year. However, while continuing with my first year, I am preparing for the entrance exams again to secure a place on a full undergraduate degree. After I graduate, I plan to work as a web developer, at the same time I'll start creating content across various areas on youtube. Also I plan to write books but this is much further down the line</p>
     </section>
-    <section>
+
+    <section class="align-left">
       <h3>Why do I use neovim?</h3>
       <p>Because neovim is the best ide and vscode for noobs.</p>
       <div class="card">
@@ -49,134 +64,137 @@
         <p><strong>Note:</strong> The statement above is purely ragebait.</p>
       </div>
     </section>
-    <section>
+
+    <section class="align-right">
       <h3>My political side</h3>
-      <p>All ideologies are bloody shitty in real life but I'm a meritocratic 
-      socialist as symbolic and I hate capitalism</p>
+      <p>All ideologies are bloody shitty in real life but I'm a meritocratic socialist as symbolic and I hate capitalism</p>
     </section>
-    <br>
-    <br>
-    <div class="techs">
-      <h1>Technologies I use</h1>
+  </main>
 
-      <div class="techs-grid">
-        
-        <div class="techs-category">
-         <h2>Operating Systems</h2>
-         <div class="techs-item">
-          <img src="../images/cachyos-icon.png" alt="cachyos">
+  <!-- techs: Kullanılan teknolojilerin listelendiği bölüm. 'br' etiketleri kaldırıldı, boşluk CSS ile verildi. -->
+  <div class="techs">
+    <!-- İkinci başlık h2 olarak düzeltildi (tek h1 kuralına uygun). -->
+    <h2>Technologies I use</h2>
+    <div class="techs-grid">
+      <!-- Kategori: İşletim Sistemleri -->
+      <div class="techs-category">
+        <h2>Operating Systems</h2>
+        <div class="techs-item">
+          <img src="images/cachyos-icon.png" alt="CachyOS işletim sistemi logosu">
           <span>CachyOS</span>
-         </div> 
-         <div class="techs-item">
-          <img src="../images/debian-icon.png" alt="debian">
+        </div>
+        <div class="techs-item">
+          <img src="images/debian-icon.png" alt="Debian işletim sistemi logosu">
           <span>Debian</span>
-         </div> 
         </div>
+      </div>
 
-        <div class="techs-category">
-          <h2>Languages</h3>
-          <div class="techs-item">
-           <img src="../images/html-icon.png" alt="html"> 
-           <span>HTML</span>
-          </div>
-          <div class="techs-item">
-           <img src="../images/css-icon.png" alt="css"> 
-           <span>CSS</span>
-          </div>
+      <!-- Kategori: Diller (kapanış etiketi h2 olarak düzeltildi) -->
+      <div class="techs-category">
+        <h2>Languages</h2>
+        <div class="techs-item">
+          <img src="images/html-icon.png" alt="HTML dili logosu">
+          <span>HTML</span>
         </div>
-
-        <div class="techs-category">
-          <h2>Self-Host and Cloud</h4>
-          <div class="techs-item">
-           <img src="../images/casaos-icon.png" alt="casaos"> 
-           <span>CasaOS</span>
-          </div>
-          <div class="techs-item">
-           <img src="../images/docker-icon.png" alt="docker-icon"> 
-           <span>Docker</span>
-          </div>
-          <div class="techs-item">
-           <img src="../images/nextcloud-icon.png" alt="nextcloud"> 
-           <span>Nextcloud</span>
-          </div>
-          <div class="techs-item">
-           <img src="../images/proton-drive-icon.png" alt="proton drive"> 
-           <span>Proton Drive</span>
-          </div>
-          <div class="techs-item">
-           <img src="../images/immich-232799461.png" alt="immich"> 
-           <span>Immich</span>
-          </div>
-          <div class="techs-item">
-            <img src="../images/vaultwarden-icon.png" alt="vaultwarden">
-            <span>Vaultwarden</span>
-          </div>
+        <div class="techs-item">
+          <img src="images/css-icon.png" alt="CSS dili logosu">
+          <span>CSS</span>
         </div>
+      </div>
 
-        <div class="techs-category">
-          <h2>Softwares</h2>
-            <div class="techs-item">
-             <img src="../images/sway-icon.png" alt="sway"> 
-             <span>Sway</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/neovim-icon.png" alt="neovim"> 
-             <span>Neovim</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/neorg-icon.png" alt="neorg"> 
-             <span>Neorg</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/librewolf-icon.png" alt="librewolf"> 
-             <span>Librewolf</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/helium-icon.png" alt="helium"> 
-             <span>Helium</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/kde-connect-icon.png" alt="kde connect"> 
-             <span>KDE Connect</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/betterbird-icon.png" alt="betterbird"> 
-             <span>Betterbird</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/K-9-mail-icon.png" alt="k-9 mail"> 
-             <span>K-9 Mail</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/free-download-manager-icon.png" alt="free download manager"> 
-             <span>Free Download Manager</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/ente-auth-icon.png" alt="ente auth"> 
-             <span>Ente Auth</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/loop-habbit-tracker-icon.png" alt="loop habbit tracker"> 
-             <span>Loop Habbit Tracker</span>
-            </div>
-            <div class="techs-item">
-             <img src="../images/simple-time-tracker-icon.png" alt="simple time tracker"> 
-             <span>Simple Time Tracker</span>
-            </div>
+      <!-- Kategori: Self-Host ve Bulut (kapanış etiketi h2 olarak düzeltildi) -->
+      <div class="techs-category">
+        <h2>Self-Host and Cloud</h2>
+        <div class="techs-item">
+          <img src="images/casaos-icon.png" alt="CasaOS logosu">
+          <span>CasaOS</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/docker-icon.png" alt="Docker logosu">
+          <span>Docker</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/nextcloud-icon.png" alt="Nextcloud logosu">
+          <span>Nextcloud</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/proton-drive-icon.png" alt="Proton Drive logosu">
+          <span>Proton Drive</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/immich-232799461.png" alt="Immich logosu">
+          <span>Immich</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/vaultwarden-icon.png" alt="Vaultwarden logosu">
+          <span>Vaultwarden</span>
+        </div>
+      </div>
+
+      <!-- Kategori: Yazılımlar -->
+      <div class="techs-category">
+        <h2>Softwares</h2>
+        <div class="techs-item">
+          <img src="images/sway-icon.png" alt="Sway pencere yöneticisi logosu">
+          <span>Sway</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/neovim-icon.png" alt="Neovim metin editörü logosu">
+          <span>Neovim</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/neorg-icon.png" alt="Neorg organizasyon aracı logosu">
+          <span>Neorg</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/librewolf-icon.png" alt="Librewolf web tarayıcısı logosu">
+          <span>Librewolf</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/helium-icon.png" alt="Helium logosu">
+          <span>Helium</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/kde-connect-icon.png" alt="KDE Connect logosu">
+          <span>KDE Connect</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/betterbird-icon.png" alt="Betterbird e-posta istemcisi logosu">
+          <span>Betterbird</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/K-9-mail-icon.png" alt="K-9 Mail e-posta istemcisi logosu">
+          <span>K-9 Mail</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/free-download-manager-icon.png" alt="Free Download Manager logosu">
+          <span>Free Download Manager</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/ente-auth-icon.png" alt="Ente Auth doğrulama uygulaması logosu">
+          <span>Ente Auth</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/loop-habbit-tracker-icon.png" alt="Loop Habit Tracker logosu">
+          <span>Loop Habit Tracker</span>
+        </div>
+        <div class="techs-item">
+          <img src="images/simple-time-tracker-icon.png" alt="Simple Time Tracker logosu">
+          <span>Simple Time Tracker</span>
         </div>
       </div>
     </div>
-    </main>
-    <br>
-    <br>
-    <hr> 
+  </div>
+
+  <!-- footer: Sayfanın alt bilgisi. İletişim detayları burada yer alır. -->
   <footer>
-     <h3 id="cinfo">Contact Information</h3>
-     <ul>
-       <li><b>e-mail:</b> efe@reivun.xyz</li>
-       <li><b>signal:</b> reivun.05</li>
-       <li><b>discord:</b> reivun_efeyigitkarakus</li> 
-     </ul>
+    <!-- id="contact-info": Bu bölüme doğrudan link atılabilir veya JavaScript ile hedeflenebilir. -->
+    <h3 id="contact-info">Contact Information</h3>
+    <ul>
+      <li><b>e-mail:</b> <a href="mailto:efe@reivun.xyz">efe@reivun.xyz</a></li>
+      <li><b>signal:</b> reivun.05</li>
+      <li><b>discord:</b> reivun_efeyigitkarakus</li>
+    </ul>
   </footer>
-</body> 
+</body>
 </html>
