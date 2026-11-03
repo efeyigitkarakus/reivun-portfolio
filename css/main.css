@@ -30,6 +30,7 @@ MA (RESET)
   --muted-text: #94a3b8;        /* Soluk yazı rengi (alt bilgiler için) */
   --max-width: 1100px;          /* İçerik için maksimum genişlik (büyütüldü) */
   --border-radius: 10px;        /* Köşe yuvarlama (daha yuvarlak) */
+  --max-width: 1500px;
 }
 
 /* ==========================================================================
@@ -99,7 +100,7 @@ body {
 */
 main,
 footer {
-  width: 100%;
+  width: auto;
   padding: 3rem 4rem;            /* Daha büyük kenar boşlukları */
   max-width: var(--max-width);
   margin: 0 auto;
@@ -162,6 +163,42 @@ p,
 li {
   font-size: clamp(1.125rem, calc(1rem + 0.25vw), 1.5rem);
   color: var(--text-color);
+}
+
+.whoami-section {
+  display: grid;
+  grid-template-columns: minmax(0, 60ch) minmax(0, 1fr); /* sol: yazı, sağ: görsel */
+  align-items: center;
+  gap: 10rem;
+
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
+
+.whoami-text h1 {
+  line-height: 1.1;
+  white-space: nowrap;
+  margin-bottom: 1.5rem;
+}
+
+.whoami-text {
+  min-width: 0;
+  margin-right: 15rem;
+}
+
+.whoami-text p {
+  font-size: clamp(0.800rem, calc(1rem + 0.25vw), 1.1rem);
+}
+
+.whoami-img {
+  display: block;
+  width: 100%;
+  min-width: 800px;
+  height: auto;
+  justify-self: end;        /* görsel sağa yaslanır */
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 #contact-info {
@@ -276,14 +313,16 @@ li {
   margin-right: auto;
   margin-left: 0;
   text-align: left;
-  max-width: 72ch;
+  max-width: 60ch;
+  min-width: 60ch;
 }
 
 .align-right {
   margin-left: auto;
   margin-right: 0;
   text-align: right;
-  max-width: 72ch;
+  max-width: 60ch;
+  min-width: 60ch;
 }
 
 /* ==========================================================================
