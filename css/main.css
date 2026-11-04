@@ -168,9 +168,9 @@ li {
 
 .whoami-section {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* yazı | imaj (imaj daha geniş, yazısı daha okunur) */
+  grid-template-columns: 1fr 2.5fr; /* yazı | imaj (imaj daha geniş, yazısı daha okunur) */
   align-items: center;
-  gap: 3rem;
+  gap: 12rem;
 
   max-width: none;
   width: 100%;
@@ -187,7 +187,7 @@ li {
 }
 
 .whoami-text p {
-  font-size: clamp(0.800rem, calc(1rem + 0.25vw), 1.1rem);
+  font-size: 17px;
 }
 
 .whoami-img {
