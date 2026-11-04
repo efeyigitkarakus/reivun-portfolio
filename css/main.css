@@ -168,7 +168,7 @@ li {
 
 .whoami-section {
   display: grid;
-  grid-template-columns: 1fr 2.5fr; /* yazı | imaj (imaj daha geniş, yazısı daha okunur) */
+  grid-template-columns: 1fr 2fr; /* yazı | imaj (imaj daha geniş, yazısı daha okunur) */
   align-items: center;
   gap: 12rem;
 
@@ -201,7 +201,7 @@ li {
 
 .destination-section {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* imaj | metin, eş bölüşüm, ekranı kaplamaz */
+  grid-template-columns: 1fr 0.5fr; /* imaj | metin, eş bölüşüm, ekranı kaplamaz */
   align-items: center;
   gap: 3rem;
   margin-left: 0;
