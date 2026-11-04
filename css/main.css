@@ -192,11 +192,33 @@ li {
 }
 
 .whoami-img {
-  display: block;
   width: 100%;
   min-width: 800px;
   height: auto;
   justify-self: end;        /* görsel sağa yaslanır */
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.destination-section {
+  display: flex; 
+  gap: 4rem;
+  align-items: center;
+  margin-left: 0;
+  max-width: 60ch;
+  min-width: 60ch;
+
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  text-align: right;
+}
+
+.destination-img {
+  width: 100%;
+  min-width: 520px;
+  height: auto;
+  justify-self: start;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
