@@ -28,7 +28,6 @@ MA (RESET)
   --navbar-bg: #37065d;         /* Navigasyon çubuğu arka plan rengi (koyu mor) */
   --card-bg: rgba(147, 51, 234, 0.1); /* Kart arka plan rengi (şeffaf mor) */
   --muted-text: #94a3b8;        /* Soluk yazı rengi (alt bilgiler için) */
-  --max-width: 1100px;          /* İçerik için maksimum genişlik (büyütüldü) */
   --border-radius: 10px;        /* Köşe yuvarlama (daha yuvarlak) */
   --max-width: 1500px;
 }
