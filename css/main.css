@@ -168,9 +168,9 @@ li {
 
 .whoami-section {
   display: grid;
-  grid-template-columns: minmax(0, 60ch) minmax(0, 1fr); /* sol: yazı, sağ: görsel */
+  grid-template-columns: 1fr 1.5fr; /* yazı | imaj (imaj daha geniş, yazısı daha okunur) */
   align-items: center;
-  gap: 10rem;
+  gap: 3rem;
 
   max-width: none;
   width: 100%;
@@ -184,7 +184,6 @@ li {
 
 .whoami-text {
   min-width: 0;
-  margin-right: 15rem;
 }
 
 .whoami-text p {
@@ -193,19 +192,19 @@ li {
 
 .whoami-img {
   width: 100%;
-  min-width: 800px;
   height: auto;
+  display: block;
   justify-self: end;        /* görsel sağa yaslanır */
   border-radius: var(--border-radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .destination-section {
-  display: flex; 
-  gap: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* imaj | metin, eş bölüşüm, ekranı kaplamaz */
   align-items: center;
+  gap: 3rem;
   margin-left: 0;
-  min-width: 60ch;
 
   max-width: none;
   width: 100%;
@@ -215,9 +214,7 @@ li {
 
 .destination-img {
   width: 100%;
-  min-width: 520px;
   height: auto;
-  justify-self: start;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
@@ -481,7 +478,8 @@ a:focus {
   }
 
   .whoami-img {
-    min-width: 380px;                /* 800px -> 380px, taşmayı önler */
+    min-width: 0;
+    max-width: none;
   }
 
   .destination-section {
@@ -489,7 +487,8 @@ a:focus {
   }
 
   .destination-img {
-    min-width: 340px;                /* 520px -> 340px */
+    min-width: 0;
+    max-width: none;
   }
 
   .navbar {
@@ -565,9 +564,9 @@ a:focus {
   }
 
   .whoami-img {
-    min-width: 0;                    /* KRİTİK: 800px sabit genişlik kalkar */
+    min-width: 0;
     width: 100%;
-    max-width: 520px;                /* Çok küçük ekranda abartısız boyut */
+    max-width: none;
     justify-self: center;
   }
 
@@ -582,9 +581,9 @@ a:focus {
   }
 
   .destination-img {
-    min-width: 0;                    /* 520px sabit genişlik kalkar */
+    min-width: 0;
     width: 100%;
-    max-width: 480px;
+    max-width: none;
     margin: 0 auto;
   }
 
